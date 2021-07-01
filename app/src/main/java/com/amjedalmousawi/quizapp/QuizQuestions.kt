@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_quiz_questions.*
 class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
     private var mQuestionsList: ArrayList<Question>? = null
-
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
 
@@ -52,6 +51,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
         when (v?.id) {
 
+
             R.id.tv_option_one -> {
 
                 selectedOptionView(tv_option_one, 1)
@@ -60,16 +60,19 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
             R.id.tv_option_two -> {
 
                 selectedOptionView(tv_option_two, 2)
+
             }
 
             R.id.tv_option_three -> {
 
                 selectedOptionView(tv_option_three, 3)
+
             }
 
             R.id.tv_option_four -> {
 
                 selectedOptionView(tv_option_four, 4)
+
             }
 
             R.id.btn_submit -> {
@@ -78,11 +81,17 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
                     mCurrentPosition++
 
+
                     when {
 
                         mCurrentPosition <= mQuestionsList!!.size -> {
 
                             setQuestion()
+                            //واخيرا هنا قدرت اسوي من يختار مايقدر يغير بعد مايضغط submit
+                            tv_option_one.isClickable = true
+                            tv_option_two.isClickable = true
+                            tv_option_three.isClickable = true
+                            tv_option_four.isClickable = true
                         }
                         else -> {
 
@@ -104,10 +113,13 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                     // This is to check if the answer is wrong
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                        //
                     }
                     else {
                         mCorrectAnswers++
+
                     }
+
 
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
@@ -116,9 +128,14 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                         btn_submit.text = "FINISH"
                     } else {
                         btn_submit.text = "GO TO NEXT QUESTION"
+                        tv_option_one.isClickable = false
+                        tv_option_two.isClickable = false
+                        tv_option_three.isClickable = false
+                        tv_option_four.isClickable = false
                     }
 
                     mSelectedOptionPosition = 0
+
                 }
             }
         }
@@ -167,6 +184,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
             this,
             R.drawable.selected_option_border_bg
         )
+
+
     }
 
     /**
