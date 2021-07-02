@@ -1,5 +1,7 @@
 package com.amjedalmousawi.quizapp
 
+import kotlin.collections.ArrayList
+
 
 object Constants {
 
@@ -11,7 +13,10 @@ object Constants {
     // END
 
     fun getQuestions(): ArrayList<Question> {
+
         val questionsList = ArrayList<Question>()
+
+
 
         // 1
         val que1 = Question(
@@ -375,7 +380,10 @@ object Constants {
         )
 
         questionsList.add(que37)
+        // هذا الكود يسوي random
+        questionsList.shuffle()
 
         return questionsList
+
     }
 }
