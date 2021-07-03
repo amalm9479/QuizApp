@@ -9,8 +9,11 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
-
+lateinit var mAdView : AdView
 class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
     private var mQuestionsList: ArrayList<Question>? = null
@@ -22,6 +25,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mUserName: String? = null
     // END
 
+
+
     /**
      * This function is auto created by Android when the Activity Class is created.
      */
@@ -30,6 +35,12 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         // This is used to align the xml view to this class
         setContentView(R.layout.activity_quiz_questions)
+
+        MobileAds.initialize(this)
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // TODO (STEP 4: Get the NAME from intent and assign it the variable.)
         // START
@@ -46,6 +57,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         tv_option_four.setOnClickListener(this)
         btn_submit.setOnClickListener(this)
     }
+
+
 
     override fun onClick(v: View?) {
 
