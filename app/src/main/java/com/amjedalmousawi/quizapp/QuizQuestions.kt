@@ -20,6 +20,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
 
+
     // TODO (STEP 3: Create a variable for getting the name from intent.)
     // START
     private var mUserName: String? = null
@@ -66,23 +67,28 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
 
             R.id.tv_option_one -> {
-
+                btn_submit.isEnabled = true
                 selectedOptionView(tv_option_one, 1)
             }
 
+
+
             R.id.tv_option_two -> {
+                btn_submit.isEnabled = true
 
                 selectedOptionView(tv_option_two, 2)
 
             }
 
             R.id.tv_option_three -> {
+                btn_submit.isEnabled = true
 
                 selectedOptionView(tv_option_three, 3)
 
             }
 
             R.id.tv_option_four -> {
+                btn_submit.isEnabled = true
 
                 selectedOptionView(tv_option_four, 4)
 
@@ -90,9 +96,13 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
             R.id.btn_submit -> {
 
+
+
                 if (mSelectedOptionPosition == 0) {
 
+
                     mCurrentPosition++
+
 
 
                     when {
@@ -105,6 +115,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                             tv_option_two.isClickable = true
                             tv_option_three.isClickable = true
                             tv_option_four.isClickable = true
+
+
                         }
                         else -> {
 
@@ -115,6 +127,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                             intent.putExtra(Constants.USER_NAME, mUserName)
                             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+
                             startActivity(intent)
                             finish()
                             // END
@@ -145,20 +158,28 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                         tv_option_two.isClickable = false
                         tv_option_three.isClickable = false
                         tv_option_four.isClickable = false
+
+
                     }
 
                     mSelectedOptionPosition = 0
 
+
                 }
             }
+
+
+
         }
+
     }
+
 
     /**
      * A function for setting the question to UI components.
      */
     private fun setQuestion() {
-
+        btn_submit.isEnabled = false
         val question = mQuestionsList!!.get(mCurrentPosition - 1) // Getting the question from the list with the help of current position.
 
         defaultOptionsView()
@@ -170,7 +191,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         }
 
         progressBar.progress = mCurrentPosition
-        tv_progress.text = "$mCurrentPosition" + "/" + progressBar.getMax()
+        tv_progress.text = "$mCurrentPosition" + "/" + progressBar.max
 
         tv_question.text = question.question
         iv_image.setImageResource(question.image)
@@ -255,4 +276,5 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
 }

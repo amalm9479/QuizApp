@@ -2,7 +2,7 @@
 <!--TODO (STEP 5: Design the result activity layout.)-->
 <!--START-->
 <!--1. Add the trophy image to the drawable folders.-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +12,12 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
@@ -68,5 +74,6 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold" />
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
     <!--END-->
