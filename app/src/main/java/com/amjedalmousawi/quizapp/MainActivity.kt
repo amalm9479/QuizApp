@@ -6,17 +6,18 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import kotlinx.android.synthetic.main.activity_main.*
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     private var mInterstitialAd: InterstitialAd? = null
+    private var mRewardedAd: RewardedAd? = null
+
     private final var TAG = "MainActivity"
     /**
      * This function is auto created by Android when the Activity Class is created.
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         mAdView.loadAd(adRequest)
 
         var adRequestI = AdRequest.Builder().build()
+        var adRequestV = AdRequest.Builder().build()
 
         InterstitialAd.load(this,"ca-app-pub-5757320647359935/1722447804", adRequestI, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
@@ -50,6 +52,25 @@ class MainActivity : AppCompatActivity() {
                 mInterstitialAd = interstitialAd
             }
         })
+
+        RewardedAd.load(
+            this,
+            "ca-app-pub-3940256099942544/5224354917",
+            adRequestV,
+            object : RewardedAdLoadCallback() {
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    mRewardedAd = null
+                }
+
+                override fun onAdLoaded(rewardedAd: RewardedAd) {
+
+                    mRewardedAd = rewardedAd
+                    mRewardedAd?.fullScreenContentCallback =
+                        object : FullScreenContentCallback() {}
+                }
+
+            })
+
 
 
         btn_start.setOnClickListener {

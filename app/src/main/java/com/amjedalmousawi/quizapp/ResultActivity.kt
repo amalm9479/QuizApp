@@ -10,12 +10,11 @@ import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import kotlinx.android.synthetic.main.activity_result.*
 
-
 @Suppress("DEPRECATION")
 class ResultActivity : AppCompatActivity() {
 
     private var mRewardedAd: RewardedAd? = null
-    private final var TAG = "MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -23,6 +22,10 @@ class ResultActivity : AppCompatActivity() {
         // START
         // Hide the status bar.
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
+
+
+
 
 
         val userName = intent.getStringExtra(Constants.USER_NAME)
@@ -35,31 +38,14 @@ class ResultActivity : AppCompatActivity() {
 
         btn_finish.setOnClickListener {
 
+            mRewardedAd?.fullScreenContentCallback = object: FullScreenContentCallback(){}
 
-            val adRequest = AdRequest.Builder().build()
-
-            RewardedAd.load(
-                this,
-                "ca-app-pub-5757320647359935/6591631107",
-                adRequest,
-                object : RewardedAdLoadCallback() {
-                    override fun onAdFailedToLoad(adError: LoadAdError) {
-                        Log.d(TAG, adError.message)
-                        mRewardedAd = null
-                    }
-
-                    override fun onAdLoaded(rewardedAd: RewardedAd) {
-                        Log.d(TAG, "Ad was loaded.")
-                        mRewardedAd = rewardedAd
-                        mRewardedAd?.fullScreenContentCallback =
-                            object : FullScreenContentCallback() {}
-                    }
-                }
-            )
+            startActivity(Intent(this, MainActivity::class.java))
 
 
-                startActivity(Intent(this, MainActivity::class.java))
-            }
-            // END
+
         }
     }
+
+
+}

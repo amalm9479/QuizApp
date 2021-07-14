@@ -9,9 +9,9 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.*
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 lateinit var mAdView : AdView
 class QuizQuestions : AppCompatActivity(), View.OnClickListener {
@@ -57,6 +57,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         tv_option_three.setOnClickListener(this)
         tv_option_four.setOnClickListener(this)
         btn_submit.setOnClickListener(this)
+
+
     }
 
 
@@ -127,8 +129,9 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                             intent.putExtra(Constants.USER_NAME, mUserName)
                             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
-
                             startActivity(intent)
+
+
                             finish()
                             // END
                         }
@@ -152,6 +155,11 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
                     if (mCurrentPosition == mQuestionsList!!.size) {
                         btn_submit.text = "FINISH"
+
+
+
+
+
                     } else {
                         btn_submit.text = "GO TO NEXT QUESTION"
                         tv_option_one.isClickable = false
@@ -186,6 +194,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
         if (mCurrentPosition == mQuestionsList!!.size) {
             btn_submit.text = "FINISH"
+
+
         } else {
             btn_submit.text = "SUBMIT"
         }
@@ -200,6 +210,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         tv_option_three.text = question.optionThree
         tv_option_four.text = question.optionFour
     }
+
+
 
     /**
      * A function to set the view of selected option view.

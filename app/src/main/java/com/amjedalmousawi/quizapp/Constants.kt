@@ -39,7 +39,7 @@ object Constants {
         questionsList.add(que2)
 
         // 3
-        val que3 = Question(
+       /* val que3 = Question(
             3, "What country does this flag belong to?",
             R.drawable.ic_flag_of_brazil,
             "Belarus", "Belize",
@@ -382,7 +382,7 @@ object Constants {
         questionsList.add(que37)
         // هذا الكود يسوي random
         questionsList.shuffle()
-
+*/
         return questionsList
 
     }
