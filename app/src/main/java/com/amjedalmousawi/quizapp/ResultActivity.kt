@@ -40,7 +40,7 @@ class ResultActivity : AppCompatActivity() {
 
             mRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {}
 
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, ChooseYourQuiz::class.java))
 
         }
     }

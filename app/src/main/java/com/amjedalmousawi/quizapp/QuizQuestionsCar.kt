@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 
 class QuizQuestionsCar : AppCompatActivity(), View.OnClickListener {
@@ -17,6 +18,8 @@ class QuizQuestionsCar : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mUserName: String? = null
+    private var mInterstitialAd: InterstitialAd? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions_car)
@@ -74,6 +77,8 @@ class QuizQuestionsCar : AppCompatActivity(), View.OnClickListener {
                             tv_option_four.isClickable = true
                         }
                         else -> {
+                            if (mInterstitialAd != null) {
+                                mInterstitialAd?.show(this)}
                             // START
                             val intent =
                                 Intent(this, ResultActivity::class.java)

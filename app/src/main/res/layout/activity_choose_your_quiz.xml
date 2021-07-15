@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:orientation="vertical"
     tools:context=".ChooseYourQuiz">
 
     <ImageView
@@ -48,6 +50,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toEndOf="@+id/grammerQuizImageView"
-        app:layout_constraintTop_toTopOf="@+id/grammerQuizImageView" />
+        app:layout_constraintTop_toTopOf="@+id/grammerQuizImageView"
+         />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/animalQuizImageView"
+        app:layout_constraintStart_toStartOf="@+id/grammerQuizImageView">
+
+    </com.google.android.gms.ads.AdView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

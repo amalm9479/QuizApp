@@ -8,15 +8,19 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.amjedalmousawi.quizapp.ConstantsGrammar.getQuestions
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 
 class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
-    private var mQuestionsList: ArrayList<Question>? = null
+    private var mQuestionsList: ArrayList<QuestionG>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mUserName: String? = null
+    private var mInterstitialAd: InterstitialAd? = null
+
     @Suppress("DEPRECATION")
 
 
@@ -30,7 +34,7 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                 // START
                 mUserName = intent.getStringExtra(ConstantsGrammar.USER_NAME)
                 // END
-                mQuestionsList = ConstantsGrammar.getQuestions()
+                mQuestionsList = getQuestions()
                 setQuestion()
 
                 tv_option_one.setOnClickListener(this)
@@ -66,7 +70,7 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                         if (mSelectedOptionPosition == 0) {
                             mCurrentPosition++
                             when {
-                                mCurrentPosition <= mQuestionsList!!.size -> {
+                                mCurrentPosition <= 5 -> {
 
                                     setQuestion()
                                     //واخيرا هنا قدرت اسوي من يختار مايقدر يغير بعد مايضغط submit
@@ -77,6 +81,8 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                                 }
                                 else -> {
                                     // START
+                                    if (mInterstitialAd != null) {
+                                        mInterstitialAd?.show(this)}
                                     val intent =
                                         Intent(this, ResultActivity::class.java)
                                     intent.putExtra(ConstantsGrammar.USER_NAME, mUserName)
@@ -132,7 +138,6 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                 tv_progress.text = "$mCurrentPosition" + "/" + progressBar.max
 
                 tv_question.text = question.question
-                iv_image.setImageResource(question.image)
                 tv_option_one.text = question.optionOne
                 tv_option_two.text = question.optionTwo
                 tv_option_three.text = question.optionThree

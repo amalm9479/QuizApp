@@ -1,14 +1,19 @@
 package com.amjedalmousawi.quizapp
 
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.android.gms.ads.rewarded.RewardedAd
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
@@ -18,7 +23,8 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
     private var mUserName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //This call the parent constructor
+        //This call the parent constructor]
+
         super.onCreate(savedInstanceState)
         // This is used to align the xml view to this class
         setContentView(R.layout.activity_quiz_questions)
@@ -37,6 +43,28 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         tv_option_three.setOnClickListener(this)
         tv_option_four.setOnClickListener(this)
         btn_submit.setOnClickListener(this)
+
+
+
+        MobileAds.initialize(this)
+
+        /**
+         * This function is auto created by Android when the Activity Class is created.
+         */
+
+        var mAdView : AdView = findViewById(R.id.adView)
+        mAdView.loadAd(adRequest)
+
+
+        val adView = AdView(this)
+
+        adView.adSize = AdSize.BANNER
+
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+        MobileAds.initialize(this) {}
+
+
 
 
     }
