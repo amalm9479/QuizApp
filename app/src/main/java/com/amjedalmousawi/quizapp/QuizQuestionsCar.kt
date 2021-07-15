@@ -10,26 +10,25 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
-class QuizQuestions : AppCompatActivity(), View.OnClickListener {
+
+class QuizQuestionsCar : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mUserName: String? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        //This call the parent constructor
         super.onCreate(savedInstanceState)
-        // This is used to align the xml view to this class
-        setContentView(R.layout.activity_quiz_questions)
+        setContentView(R.layout.activity_quiz_questions_car)
+
         MobileAds.initialize(this)
         mAdView2 = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView2.loadAd(adRequest)
         // START
-        mUserName = intent.getStringExtra(ConstantsFalg.USER_NAME)
+        //mUserName = intent.getStringExtra(ConstantsCar.USER_NAME)
         // END
-        mQuestionsList = ConstantsFalg.getQuestions()
+        mQuestionsList = ConstantsCar.getQuestions()
         setQuestion()
 
         tv_option_one.setOnClickListener(this)
@@ -65,7 +64,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                 if (mSelectedOptionPosition == 0) {
                     mCurrentPosition++
                     when {
-                        mCurrentPosition <= 5 -> {
+                        mCurrentPosition <= 5-> {
 
                             setQuestion()
                             //واخيرا هنا قدرت اسوي من يختار مايقدر يغير بعد مايضغط submit
@@ -78,9 +77,9 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                             // START
                             val intent =
                                 Intent(this, ResultActivity::class.java)
-                            intent.putExtra(ConstantsFalg.USER_NAME, mUserName)
-                            intent.putExtra(ConstantsFalg.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(ConstantsFalg.TOTAL_QUESTIONS, 5)
+                            intent.putExtra(ConstantsCar.USER_NAME, mUserName)
+                            intent.putExtra(ConstantsCar.CORRECT_ANSWERS, mCorrectAnswers)
+                            intent.putExtra(ConstantsCar.TOTAL_QUESTIONS, 5)
                             startActivity(intent)
                             finish()
                             // END
@@ -97,7 +96,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                     }
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
-            //mQuestionsList!!.size
+                    //mQuestionsList!!.size
                     if (mCurrentPosition == 5) {
                         btn_submit.text = "FINISH"
 
@@ -196,5 +195,5 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                 )
             }
         }
-    }
-}
+    }}
+

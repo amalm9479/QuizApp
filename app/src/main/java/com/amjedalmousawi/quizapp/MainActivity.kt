@@ -86,10 +86,13 @@ class MainActivity : AppCompatActivity() {
                     .show()
             } else {
 
-                val intent = Intent(this, QuizQuestions::class.java)
+                val intent = Intent(this, ChooseYourQuiz::class.java)
                 // TODO (STEP 2: Pass the name through intent using the constant variable which we have created.)
                 // START
-                intent.putExtra(Constants.USER_NAME, et_name.text.toString())
+                intent.putExtra(ConstantsFalg.USER_NAME, et_name.text.toString())
+                intent.putExtra(ConstantsCar.USER_NAME, et_name.text.toString())
+                intent.putExtra(ConstantsAnimal.USER_NAME, et_name.text.toString())
+                intent.putExtra(ConstantsGrammar.USER_NAME, et_name.text.toString())
                 // END
                 startActivity(intent)
                 finish()

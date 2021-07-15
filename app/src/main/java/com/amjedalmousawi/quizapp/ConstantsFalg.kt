@@ -3,19 +3,18 @@ package com.amjedalmousawi.quizapp
 import kotlin.collections.ArrayList
 
 
-object Constants {
+object ConstantsFalg {
+
 
     // TODO (STEP 1: Create a constant variables which we required in the result screen.)
     // START
     const val USER_NAME: String = "user_name"
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
-    // END
 
     fun getQuestions(): ArrayList<Question> {
 
         val questionsList = ArrayList<Question>()
-
 
 
         // 1
@@ -39,7 +38,7 @@ object Constants {
         questionsList.add(que2)
 
         // 3
-       /* val que3 = Question(
+         val que3 = Question(
             3, "What country does this flag belong to?",
             R.drawable.ic_flag_of_brazil,
             "Belarus", "Belize",
@@ -382,8 +381,17 @@ object Constants {
         questionsList.add(que37)
         // هذا الكود يسوي random
         questionsList.shuffle()
-*/
+
         return questionsList
 
     }
 }
+
+
+
+
+
+
+
+
+
