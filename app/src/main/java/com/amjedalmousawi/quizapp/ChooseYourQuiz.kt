@@ -62,45 +62,103 @@ class ChooseYourQuiz : AppCompatActivity() {
         FalgQuizImageView.setOnClickListener {
             if (mInterstitialAd != null) {
                 mInterstitialAd?.show(this)
+            } else {
+                val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
+                startActivity(intent)
+            }
+                mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+
+                    override fun onAdDismissedFullScreenContent() {
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        startActivity(intent)
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        startActivity(intent)
+                    }
+                    override fun onAdShowedFullScreenContent() {
+                        mInterstitialAd = null
+                    }
+                }
             }
 
-            mInterstitialAd?.fullScreenContentCallback = object: FullScreenContentCallback() {
+
+
+
+        grammerQuizImageView.setOnClickListener {
+
+            if (mInterstitialAd != null) {
+                mInterstitialAd?.show(this)
+            } else {
+                val intent = Intent(this@ChooseYourQuiz, QuizQuestionsGrammer::class.java)
+                startActivity(intent)
+            }
+            mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+
                 override fun onAdDismissedFullScreenContent() {
-                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
+                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsGrammer::class.java)
                     startActivity(intent)
                 }
 
                 override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
 
-                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
+                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsGrammer::class.java)
                     startActivity(intent)
                 }
+                override fun onAdShowedFullScreenContent() {
+                    mInterstitialAd = null
                 }
-
-        }
-        grammerQuizImageView.setOnClickListener {
-
-            if (mInterstitialAd != null) {
-                mInterstitialAd?.show(this)
             }
-
-            val intent = Intent(this, QuizQuestionsGrammer::class.java)
-            startActivity(intent)
         }
             animalQuizImageView.setOnClickListener {
                 if (mInterstitialAd != null) {
                     mInterstitialAd?.show(this)
+                } else {
+                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsAnimal::class.java)
+                    startActivity(intent)
                 }
+                mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
 
-                val intent = Intent(this, QuizQuestionsAnimal::class.java)
-                startActivity(intent)
+                    override fun onAdDismissedFullScreenContent() {
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsAnimal::class.java)
+                        startActivity(intent)
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsAnimal::class.java)
+                        startActivity(intent)
+                    }
+                    override fun onAdShowedFullScreenContent() {
+                        mInterstitialAd = null
+                    }
+                }
             }
             carQuizImageView.setOnClickListener {
                 if (mInterstitialAd != null) {
                     mInterstitialAd?.show(this)
+                } else {
+                    val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
+                    startActivity(intent)
                 }
-                val intent = Intent(this, QuizQuestionsCar::class.java)
-                startActivity(intent)
+                mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+
+                    override fun onAdDismissedFullScreenContent() {
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        startActivity(intent)
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        startActivity(intent)
+                    }
+                    override fun onAdShowedFullScreenContent() {
+                        mInterstitialAd = null
+                    }
+                }
             }
         }
     }
