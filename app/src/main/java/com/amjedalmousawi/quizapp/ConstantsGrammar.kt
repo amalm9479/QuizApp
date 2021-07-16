@@ -110,7 +110,7 @@ object ConstantsGrammar {
         questionsList.add(que12)
 
         val que13 = QuestionG(
-            13, "Did you speak to Juliet?No, I've ______ seen her.",
+            13, "Did you speak to Juliet? No, I've ______ seen her.",
             "nearly", "hardly",
             "often", "always", 2
         )

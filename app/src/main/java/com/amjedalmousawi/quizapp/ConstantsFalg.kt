@@ -118,7 +118,7 @@ object ConstantsFalg {
         questionsList.add(que10)
 
         val que11 = Question(
-            1, "What country does this flag belong to?",
+            11, "What country does this flag belong to?",
             R.drawable.ic_flag_of_afghanistan,
             "Argentina", "Belize",
             "Armenia", "afghanistan", 4
@@ -128,7 +128,7 @@ object ConstantsFalg {
 
         // 2
         val que12 = Question(
-            2, "What country does this flag belong to?",
+            12, "What country does this flag belong to?",
             R.drawable.ic_flag_of_bahrain,
             "qatar", "egypt",
             "bahrain", "Kuwait", 3
@@ -138,7 +138,7 @@ object ConstantsFalg {
 
         // 3
         val que13 = Question(
-            3, "What country does this flag belong to?",
+            13, "What country does this flag belong to?",
             R.drawable.ic_flag_of_canada,
             "Belarus", "Denmark",
             "Manchester", "Canada", 4
@@ -148,7 +148,7 @@ object ConstantsFalg {
 
         // 4
         val que14 = Question(
-            4, "What country does this flag belong to?",
+            14, "What country does this flag belong to?",
             R.drawable.ic_flag_of_egypt,
             "Palestine", "egypt",
             "jordon", "bahrain ", 2
@@ -158,7 +158,7 @@ object ConstantsFalg {
 
         // 5
         val que15 = Question(
-            5, "What country does this flag belong to?",
+            15, "What country does this flag belong to?",
             R.drawable.ic_flag_of_england,
             "Gabon", "France",
             "england", "Finland", 3
@@ -168,7 +168,7 @@ object ConstantsFalg {
 
         // 6
         val que16 = Question(
-            6, "What country does this flag belong to?",
+            16, "What country does this flag belong to?",
             R.drawable.ic_flag_of_indonesia,
             "indonesia", "Georgia",
             "Greece", "none of these", 1
@@ -178,7 +178,7 @@ object ConstantsFalg {
 
         // 7
         val que17 = Question(
-            7, "What country does this flag belong to?",
+            17, "What country does this flag belong to?",
             R.drawable.ic_flag_of_iran,
             "Dominica", "Egypt",
             "iran", "Ethiopia", 3
@@ -188,7 +188,7 @@ object ConstantsFalg {
 
         // 8
         val que18 = Question(
-            8, "What country does this flag belong to?",
+            18, "What country does this flag belong to?",
             R.drawable.ic_flag_of_iraq,
             "Ireland", "Iran",
             "kuwait", "iraq", 4
@@ -198,7 +198,7 @@ object ConstantsFalg {
 
         // 9
         val que19 = Question(
-            9, "What country does this flag belong to?",
+            19, "What country does this flag belong to?",
             R.drawable.ic_flag_of_ireland,
             "ireland", "New Zealand",
             "Tuvalu", "sudan", 1
@@ -208,7 +208,7 @@ object ConstantsFalg {
 
         // 10
         val que20 = Question(
-            10, "What country does this flag belong to?",
+            20, "What country does this flag belong to?",
             R.drawable.ic_flag_of_italy,
             "italy", "Armenia",
             "ireland", "Palestine", 1
@@ -217,7 +217,7 @@ object ConstantsFalg {
         questionsList.add(que20)
 
         val que21 = Question(
-            1, "What country does this flag belong to?",
+            21, "What country does this flag belong to?",
             R.drawable.ic_flag_of_japan,
             "Argentina", "japan",
             "korea", "china", 2
@@ -227,7 +227,7 @@ object ConstantsFalg {
 
         // 2
         val que22 = Question(
-            2, "What country does this flag belong to?",
+            22, "What country does this flag belong to?",
             R.drawable.ic_flag_of_jordan,
             "saudi arabia ", "lebanon",
             "jordan", "kuwait", 3
@@ -237,7 +237,7 @@ object ConstantsFalg {
 
         // 3
         val que23 = Question(
-            3, "What country does this flag belong to?",
+            23, "What country does this flag belong to?",
             R.drawable.ic_flag_of_lebanon,
             "Belarus", "jordan",
             "Brunei", "lebanon", 4
@@ -247,7 +247,7 @@ object ConstantsFalg {
 
         // 4
         val que24 = Question(
-            4, "What country does this flag belong to?",
+            24, "What country does this flag belong to?",
             R.drawable.ic_flag_of_mexico,
             "mexico", "Belgium",
             "Fiji", "France", 1
@@ -257,7 +257,7 @@ object ConstantsFalg {
 
         // 5
         val que25 = Question(
-            5, "What country does this flag belong to?",
+            25, "What country does this flag belong to?",
             R.drawable.ic_flag_of_morocco,
             "Gabon", "morocco",
             "lebanon", "Finland", 2
@@ -267,7 +267,7 @@ object ConstantsFalg {
 
         // 6
         val que26 = Question(
-            6, "What country does this flag belong to?",
+            26, "What country does this flag belong to?",
             R.drawable.ic_flag_of_oman,
             "oman", "Georgia",
             "Greece", "none of these", 1
@@ -277,7 +277,7 @@ object ConstantsFalg {
 
         // 7
         val que27 = Question(
-            7, "What country does this flag belong to?",
+            27, "What country does this flag belong to?",
             R.drawable.ic_flag_of_pakistan,
             "pakistan", "Egypt",
             "Denmark", "Ethiopia", 1
@@ -287,7 +287,7 @@ object ConstantsFalg {
 
         // 8
         val que28 = Question(
-            8, "What country does this flag belong to?",
+            28, "What country does this flag belong to?",
             R.drawable.ic_flag_of_palestine,
             "Ireland", "Iran",
             "palestine", "Jordan", 3
@@ -297,7 +297,7 @@ object ConstantsFalg {
 
         // 9
         val que29 = Question(
-            9, "What country does this flag belong to?",
+            29, "What country does this flag belong to?",
             R.drawable.ic_flag_of_qatar,
             "kuwait", "oman",
             "qatar", "bahrain", 3
@@ -307,7 +307,7 @@ object ConstantsFalg {
 
         // 10
         val que30 = Question(
-            10, "What country does this flag belong to?",
+            30, "What country does this flag belong to?",
             R.drawable.ic_flag_of_south_korea,
             "Philippine", "north korea",
             "china", "south korea", 4
@@ -316,7 +316,7 @@ object ConstantsFalg {
         questionsList.add(que30)
 
         val que31 = Question(
-            1, "What country does this flag belong to?",
+            31, "What country does this flag belong to?",
             R.drawable.ic_flag_of_syria,
             "syria", "qatar",
             "Armenia", "egypt", 1
@@ -326,7 +326,7 @@ object ConstantsFalg {
 
         // 2
         val que32 = Question(
-            2, "What country does this flag belong to?",
+            32, "What country does this flag belong to?",
             R.drawable.ic_flag_of_thailand,
             "Philippine", "taiwan",
             "thailand", "none of these", 3
@@ -336,7 +336,7 @@ object ConstantsFalg {
 
         // 3
         val que33 = Question(
-            3, "What country does this flag belong to?",
+            33, "What country does this flag belong to?",
             R.drawable.ic_flag_of_united_arab_emirates,
             "kuwait", "jordon",
             "saudi arabia", "united arab emirates", 4
@@ -346,7 +346,7 @@ object ConstantsFalg {
 
         // 4
         val que34 = Question(
-            4, "What country does this flag belong to?",
+            34, "What country does this flag belong to?",
             R.drawable.ic_flag_of_united_kingdom,
             "Bahamas", "united kingdom",
             "Barbados", "Belize", 2
@@ -356,7 +356,7 @@ object ConstantsFalg {
 
         // 5
         val que35 = Question(
-            5, "What country does this flag belong to?",
+            35, "What country does this flag belong to?",
             R.drawable.ic_flag_of_united_states_of_america,
             "Gabon", "France",
             "united states of america", "Finland", 3
@@ -364,7 +364,7 @@ object ConstantsFalg {
 
         questionsList.add(que35)
         val que36 = Question(
-            5, "What country does this flag belong to?",
+            36, "What country does this flag belong to?",
             R.drawable.ic_flag_of_vietnam,
             "vietnam", "jordan",
             "Brunei", "lebanon", 1
@@ -372,7 +372,7 @@ object ConstantsFalg {
 
         questionsList.add(que36)
         val que37 = Question(
-            5, "What country does this flag belong to?",
+            37, "What country does this flag belong to?",
             R.drawable.ic_flag_of_yemen,
             "Gabon", "Syria",
             "yemen", "non of these", 3
