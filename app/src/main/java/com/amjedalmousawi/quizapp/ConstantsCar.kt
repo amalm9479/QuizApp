@@ -12,115 +12,115 @@ object ConstantsCar {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
-            1, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_argentina,
-            "Argentina", "Australia",
-            "Armenia", "Austria", 1
+            1, "what is the name of this brand?",
+            R.drawable.ca_audi,
+            "audi", "suzuki",
+            "nissan", "seat", 1
         )
 
         questionsList.add(que1)
 
         // 2
         val que2 = Question(
-            2, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_australia,
-            "Angola", "Austria",
-            "Australia", "Armenia", 3
+            2, "what is the name of this brand?",
+            R.drawable.ca_buick,
+            "fiat", "aston martin",
+            "buick", "lexus", 3
         )
 
         questionsList.add(que2)
 
         // 3
         val que3 = Question(
-            3, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_brazil,
-            "Belarus", "Belize",
-            "Brunei", "Brazil", 4
+            3, "what is the name of this brand?",
+            R.drawable.ca_cadillac,
+            "subaru", "peugeot",
+            "volvo", "cadillac", 4
         )
 
         questionsList.add(que3)
 
         // 4
         val que4 = Question(
-            4, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_belgium,
-            "Bahamas", "Belgium",
-            "Barbados", "Belize", 2
+            4, "what is the name of this brand?",
+            R.drawable.ca_chevrolet,
+            "audi", "chevrolet",
+            "mazda", "toyota", 2
         )
 
         questionsList.add(que4)
 
         // 5
         val que5 = Question(
-            5, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_fiji,
-            "Gabon", "France",
-            "Fiji", "Finland", 3
+            5, "what is the name of this brand?",
+            R.drawable.ca_ford,
+            "jaguar", "dodge",
+            "ford", "honda", 3
         )
 
         questionsList.add(que5)
 
         // 6
         val que6 = Question(
-            6, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_germany,
-            "Germany", "Georgia",
-            "Greece", "none of these", 1
+            6, "what is the name of this brand?",
+            R.drawable.ca_honda,
+            "honda", "opel",
+            "hyundai", "maserati", 1
         )
 
         questionsList.add(que6)
 
         // 7
         val que7 = Question(
-            7, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_denmark,
-            "Dominica", "Egypt",
-            "Denmark", "Ethiopia", 3
+            7, "what is the name of this brand?",
+            R.drawable.ca_lexux,
+            "mercury", "deawoo",
+            "lexux", "bentley", 3
         )
 
         questionsList.add(que7)
 
         // 8
         val que8 = Question(
-            8, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_india,
-            "Ireland", "Iran",
-            "Hungary", "India", 4
+            8, "what is the name of this brand?",
+            R.drawable.ca_nissan,
+            "bmw", "opel",
+            "lexux", "nissan", 4
         )
 
         questionsList.add(que8)
 
         // 9
         val que9 = Question(
-            9, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_new_zealand,
-            "Australia", "New Zealand",
-            "Tuvalu", "United States of America", 2
+            9, "what is the name of this brand?",
+            R.drawable.ca_skoda,
+            "lamborghini", "skoda",
+            "porsche", "bmw", 2
         )
 
         questionsList.add(que9)
 
         // 10
         val que10 = Question(
-            10, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_kuwait,
-            "Kuwait", "Jordan",
-            "Sudan", "Palestine", 1
+            10, "what is the name of this brand?",
+            R.drawable.ca_toyota,
+            "toyota", "honda",
+            "ferrari", "holden", 1
         )
 
         questionsList.add(que10)
 
         val que11 = Question(
-            11, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_afghanistan,
-            "Argentina", "Belize",
-            "Armenia", "afghanistan", 4
+            11, "what is the name of this brand?",
+            R.drawable.ca_volkswagen,
+            "nissan", "suzuki",
+            "acura", "volkswagen", 4
         )
 
         questionsList.add(que11)
 
         // 2
-        val que12 = Question(
+       /* val que12 = Question(
             12, "What country does this flag belong to?",
             R.drawable.ic_flag_of_bahrain,
             "qatar", "egypt",
@@ -372,6 +372,7 @@ object ConstantsCar {
         )
 
         questionsList.add(que37)
+        */
         // هذا الكود يسوي random
         questionsList.shuffle()
 
