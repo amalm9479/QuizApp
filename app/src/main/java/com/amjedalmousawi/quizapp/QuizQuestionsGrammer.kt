@@ -70,7 +70,7 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                         if (mSelectedOptionPosition == 0) {
                             mCurrentPosition++
                             when {
-                                mCurrentPosition <= 5 -> {
+                                mCurrentPosition <= 10 -> {
 
                                     setQuestion()
                                     //واخيرا هنا قدرت اسوي من يختار مايقدر يغير بعد مايضغط submit
@@ -87,7 +87,7 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                                         Intent(this, ResultActivity::class.java)
                                     intent.putExtra(ConstantsGrammar.USER_NAME, mUserName)
                                     intent.putExtra(ConstantsGrammar.CORRECT_ANSWERS, mCorrectAnswers)
-                                    intent.putExtra(ConstantsGrammar.TOTAL_QUESTIONS, 5)
+                                    intent.putExtra(ConstantsGrammar.TOTAL_QUESTIONS, 10)
                                     startActivity(intent)
                                     finish()
                                     // END
@@ -105,7 +105,7 @@ class QuizQuestionsGrammer : AppCompatActivity(), View.OnClickListener {
                             // This is for correct answer
                             answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
                             //mQuestionsList!!.size
-                            if (mCurrentPosition == 5) {
+                            if (mCurrentPosition == 10) {
                                 btn_submit.text = "FINISH"
 
                             } else {

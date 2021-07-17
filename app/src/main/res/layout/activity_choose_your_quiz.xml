@@ -12,8 +12,9 @@
         android:id="@+id/FalgQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/ic_flag_of_kuwait"
         app:layout_constraintBottom_toTopOf="@+id/grammerQuizImageView"
         app:layout_constraintEnd_toStartOf="@+id/carQuizImageView"
@@ -26,8 +27,11 @@
         android:id="@+id/carQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/ic_flag_of_brazil"
         app:layout_constraintEnd_toEndOf="@+id/animalQuizImageView"
+        app:layout_constraintStart_toEndOf="@+id/FalgQuizImageView"
         app:layout_constraintTop_toTopOf="@+id/FalgQuizImageView" />
 
     <ImageView
@@ -35,8 +39,8 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="348dp"
-        android:src="@drawable/ic_flag_of_thailand"
+        android:layout_marginBottom="216dp"
+        android:src="@drawable/grammeract"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -45,24 +49,27 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="32dp"
-        android:src="@drawable/ic_flag_of_fiji"
+        android:src="@drawable/animalact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toEndOf="@+id/grammerQuizImageView"
-        app:layout_constraintTop_toTopOf="@+id/grammerQuizImageView"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/carQuizImageView" />
 
     <TextView
         android:id="@+id/tv_app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="@string/app_name"
+        android:layout_marginTop="16dp"
         android:gravity="center"
+        android:text="@string/app_name"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 

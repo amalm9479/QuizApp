@@ -93,7 +93,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                 if (mSelectedOptionPosition == 0) {
                     mCurrentPosition++
                     when {
-                        mCurrentPosition <= 5 -> {
+                        mCurrentPosition <= 10 -> {
 
                             setQuestion()
                             //واخيرا هنا قدرت اسوي من يختار مايقدر يغير بعد مايضغط submit
@@ -108,7 +108,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                                 Intent(this, ResultActivity::class.java)
                             intent.putExtra(ConstantsFalg.USER_NAME, mUserName)
                             intent.putExtra(ConstantsFalg.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(ConstantsFalg.TOTAL_QUESTIONS, 5)
+                            intent.putExtra(ConstantsFalg.TOTAL_QUESTIONS, 10)
                             startActivity(intent)
                             finish()
                             // END
@@ -126,7 +126,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
             //mQuestionsList!!.size
-                    if (mCurrentPosition == 5) {
+                    if (mCurrentPosition == 10) {
                         btn_submit.text = "FINISH"
 
                     } else {

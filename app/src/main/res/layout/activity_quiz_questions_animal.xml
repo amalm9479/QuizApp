@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:indeterminate="false"
-                android:max="5"
+                android:max="10"
                 android:minHeight="50dp"
                 android:progress="0" />
 
@@ -59,7 +59,7 @@
                 android:padding="15dp"
                 android:textColorHint="#7A8089"
                 android:textSize="14sp"
-                tools:text="5" />
+                tools:text="10" />
         </LinearLayout>
 
         <TextView
