@@ -60,7 +60,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
 
         adView.adSize = AdSize.BANNER
 
-        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+        adView.adUnitId = "ca-app-pub-5757320647359935/4335226750"
 
         MobileAds.initialize(this) {}
 

@@ -4,58 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/bkb"
     android:orientation="vertical"
     tools:context=".ChooseYourQuiz">
+
 
     <ImageView
         android:id="@+id/FalgQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/flags"
-        app:layout_constraintBottom_toTopOf="@+id/grammerQuizImageView"
         app:layout_constraintEnd_toStartOf="@+id/carQuizImageView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        android:contentDescription="@string/flag_quiz" />
 
     <ImageView
         android:id="@+id/carQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/carbrands"
-        app:layout_constraintEnd_toEndOf="@+id/animalQuizImageView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/FalgQuizImageView"
-        app:layout_constraintTop_toTopOf="@+id/FalgQuizImageView" />
+        app:layout_constraintTop_toTopOf="@+id/FalgQuizImageView"
+        android:contentDescription="@string/car_question" />
 
     <ImageView
         android:id="@+id/grammerQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/grammer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/carQuizImageView"
+        app:layout_constraintTop_toBottomOf="@+id/carQuizImageView"
+        android:contentDescription="@string/grammar_question" />
 
     <ImageView
         android:id="@+id/animalQuizImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/animalact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toEndOf="@+id/grammerQuizImageView"
-        app:layout_constraintTop_toBottomOf="@+id/carQuizImageView" />
+        app:layout_constraintEnd_toStartOf="@+id/grammerQuizImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/FalgQuizImageView"
+        app:layout_constraintTop_toBottomOf="@+id/FalgQuizImageView"
+        android:contentDescription="@string/animal_question" />
+
+    <ImageView
+        android:id="@+id/soon"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/soon"
+        app:layout_constraintEnd_toEndOf="@+id/animalQuizImageView"
+        app:layout_constraintStart_toStartOf="@+id/animalQuizImageView"
+        app:layout_constraintTop_toBottomOf="@+id/animalQuizImageView"
+        android:contentDescription="@string/soon_question" />
 
     <TextView
         android:id="@+id/tv_app_name"
@@ -69,9 +79,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -79,12 +87,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/animalQuizImageView"
-        app:layout_constraintStart_toStartOf="@+id/grammerQuizImageView">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </com.google.android.gms.ads.AdView>
 

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="flag_quiz">FalgQuiz</string>
+    <string name="car_question">car_question</string>
+    <string name="grammar_question">grammar_question</string>
+    <string name="animal_question">animal_question</string>
+    <string name="soon_question">soon_question</string>
+    <string name="finish">FINISH</string>
+    <string name="hey_congratulations">Hey, Congratulations!</string>
+    <string name="result">Result</string>
 </resources>

@@ -37,14 +37,14 @@ class ChooseYourQuiz : AppCompatActivity() {
 
         adView.adSize = AdSize.BANNER
 
-        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+        adView.adUnitId = "ca-app-pub-5757320647359935/4335226750"
         val adRequestI = AdRequest.Builder().build()
         MobileAds.initialize(this) {}
 
 
         InterstitialAd.load(
             this,
-            "ca-app-pub-3940256099942544/1033173712",
+            "ca-app-pub-5757320647359935/1722447804",
             adRequestI,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
@@ -63,7 +63,7 @@ class ChooseYourQuiz : AppCompatActivity() {
             if (mInterstitialAd != null) {
                 mInterstitialAd?.show(this)
             } else {
-                val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
+                val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
                 startActivity(intent)
             }
                 mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
@@ -146,13 +146,13 @@ class ChooseYourQuiz : AppCompatActivity() {
                 mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
 
                     override fun onAdDismissedFullScreenContent() {
-                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
                         startActivity(intent)
                     }
 
                     override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
 
-                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsFalg::class.java)
+                        val intent = Intent(this@ChooseYourQuiz, QuizQuestionsCar::class.java)
                         startActivity(intent)
                     }
                     override fun onAdShowedFullScreenContent() {

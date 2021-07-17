@@ -42,7 +42,7 @@ class ResultActivity : AppCompatActivity() {
         //tv_name.text ="$userName"
         InterstitialAd.load(
             this,
-            "ca-app-pub-3940256099942544/1033173712",
+            "ca-app-pub-5757320647359935/1722447804",
             adRequestI,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
