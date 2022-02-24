@@ -37,14 +37,14 @@ class ChooseYourQuiz : AppCompatActivity() {
 
         adView.adSize = AdSize.BANNER
 
-        adView.adUnitId = "ca-app-pub-5757320647359935/4335226750"
+        adView.adUnitId = "ca-app-pub-7136583183105988/1986049257"
         val adRequestI = AdRequest.Builder().build()
         MobileAds.initialize(this) {}
 
 
         InterstitialAd.load(
             this,
-            "ca-app-pub-5757320647359935/1722447804",
+            "ca-app-pub-7136583183105988/7853453608",
             adRequestI,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {

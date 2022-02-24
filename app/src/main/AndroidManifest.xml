@@ -16,7 +16,7 @@
         <activity android:name=".QuizQuestionsCar" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5757320647359935~8685535306" />
+            android:value="ca-app-pub-7136583183105988~5968692141" />
 
         <activity
             android:name=".ResultActivity"
